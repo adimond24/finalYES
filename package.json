@@ -5,23 +5,24 @@
     "express-async-errors": "^3.1.1",
     "mongobd": "^0.0.1-security.0",
     "mongodb": "^6.8.0",
-    "mongoose": "^8.5.1"
+    "mongoose": "^8.5.1",
+    "swagger-ui-express": "^5.0.1"
   },
-  
-    "name": "routes_api",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-      "start": "nodemon server.js",
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-  
-    "devDependencies": {
-      "nodemon": "^2.0.22"
-    }
+  "name": "routes_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "swagger": "node ./swagger.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "swagger-autogen": "^2.23.7"
   }
-
+}
