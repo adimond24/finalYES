@@ -2,6 +2,8 @@ require('dotenv').config()
 require('express-async-errors')
 
 const express = require("express");
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json")
 const app = express();
 
 const connectDB = require('./connect');
@@ -23,7 +25,7 @@ app.use('/api/v1/food', foodRouter);
 //products route
 app.use(notFoundMiddleware)
 app.use(errorMiddleware)
-
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 const port = process.env.PORT || 3000
 
 const start = async ()=>{
